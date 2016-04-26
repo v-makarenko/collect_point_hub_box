@@ -4,5 +4,49 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
-    <string name="action_settings">Settings</string>
+    <string name="text_step_1"><![CDATA[
+    <b><h2>Welcome to the HubBox Parcel App</h2>
+        <p>Dear Jon &amp; team,</p>
+        <p>Welcome to the HubBox Collect Point Network. We’re delighted to have you on board and we can’t wait to get you started.</p>
+        <p>Before everything goes live, please check out our brief tour and training video. Once this has been completed we’ll get you up and running on the website.</p>
+        <p>Best, The HubBox Team</p>
+     </b>
+    ]]></string>
+    <string name="text_btn_1">Next</string>
+
+    <string name="text_step_2"><![CDATA[
+    <b><h2>Step by Step guide to getting started.</h2>
+    <p>
+    1. Agree to our Collect Point Agreement terms – we’ve already sent you a copy of this to sign online via Docusign – if not please call us
+   </p><p> 2. Get your camera up and running
+    </p>
+
+    ]]></string>
+    <string name="text_btn_2">Agree to HubBox Terms</string>
+    <string name="text_step_3"><![CDATA[
+    <b><h2>Step 3: Let’s get your camera up and running</h2>
+<p>As you saw on the video, we have a camera installed on the App which takes pictures of labels and automatically logs them in!
+Note, you use this when there is no HubBox ID anywhere on the label.
+</p>
+<p>
+To check everything is setup, we want you to take 3 photos as per the guide
+</p>
+<p>
+Click below to get going and follow the instructions.
+</p></b>
+
+    ]]></string>
+    <string name="text_btn_3">Open Camera</string>
+    <string name="text_step_4"><![CDATA[
+    <b><h2>Step 4: You’re all set – </h2>
+    <p>
+You’ll find plenty more helpful information once you’re in the App. As you can see, being a HubBox Collect Point could not be simpler.
+</p><p>
+The final thing to do is follow the practice instructions on the brochure and log your first two parcels in and out. We’ll then be in touch to make sure everything is okay.
+</p></b>
+
+    ]]></string>
+    <string name="text_btn_4">Go to the App &amp; complete the parcel practice
+</string>
+
 </resources>
