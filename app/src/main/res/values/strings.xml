@@ -11,7 +11,8 @@
         <p>Before everything goes live, please check out our brief tour and training video. Once this has been completed we’ll get you up and running on the website.</p>
         <p>Best, The HubBox Team</p>
      </b>
-    ]]></string>
+    ]]>
+    </string>
     <string name="text_btn_1">Next</string>
 
     <string name="text_step_2"><![CDATA[
@@ -21,7 +22,8 @@
    </p><p> 2. Get your camera up and running
     </p>
 
-    ]]></string>
+    ]]>
+    </string>
     <string name="text_btn_2">Agree to HubBox Terms</string>
     <string name="text_step_3"><![CDATA[
     <b><h2>Step 3: Let’s get your camera up and running</h2>
@@ -35,7 +37,8 @@ To check everything is setup, we want you to take 3 photos as per the guide
 Click below to get going and follow the instructions.
 </p></b>
 
-    ]]></string>
+    ]]>
+    </string>
     <string name="text_btn_3">Open Camera</string>
     <string name="text_step_4"><![CDATA[
     <b><h2>Step 4: You’re all set – </h2>
@@ -45,8 +48,32 @@ You’ll find plenty more helpful information once you’re in the App. As you c
 The final thing to do is follow the practice instructions on the brochure and log your first two parcels in and out. We’ll then be in touch to make sure everything is okay.
 </p></b>
 
+    ]]>
+    </string>
+    <string name="text_btn_4">Go to the App &amp; complete the parcel practice</string>
+
+
+    <string name="text_and_cam_step_1"><![CDATA[
+    <b><p>Picture 1: Inside your shop
+</p><p>HubBox marketing materials
+</p><p>On show</p>
+</b>
+    ]]>
+    </string>
+
+    <string name="text_and_cam_step_2"><![CDATA[
+    <b><p>Picture 2: Outside  of your shop showing our sticker in the window
+</p>
+</b>
     ]]></string>
-    <string name="text_btn_4">Go to the App &amp; complete the parcel practice
-</string>
+
+    <string name="text_and_cam_step_3"><![CDATA[
+    <b><p>Picture 3: Practice Parcel testing the HubBox ID
+</p>
+</b>
+    ]]></string>
+    <string name="take_shot_lbl">Take shot</string>
+    <string name="new_shot_lbl">New shot</string>
+    <string name="next_lbl">Next</string>
 
 </resources>
