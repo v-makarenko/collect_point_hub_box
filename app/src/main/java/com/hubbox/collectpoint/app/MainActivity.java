@@ -14,7 +14,7 @@ import android.view.MenuItem;
 
 import com.hubbox.collectpoint.app.util.AppConsts;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends SecureActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private void startTourIfNeeded() {
@@ -93,9 +93,12 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-//        if (id == R.id.nav_camera) {
-//            // Handle the camera action
-//        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_logout_drawer_item) {
+            ((HubBoxApplication)getApplication()).logout();
+            finish();
+            startActivity(getIntent());
+        }
+// else if (id == R.id.nav_gallery) {
 //
 //        } else if (id == R.id.nav_slideshow) {
 //

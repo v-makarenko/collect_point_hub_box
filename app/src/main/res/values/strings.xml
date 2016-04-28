@@ -75,5 +75,9 @@ The final thing to do is follow the practice instructions on the brochure and lo
     <string name="take_shot_lbl">Take shot</string>
     <string name="new_shot_lbl">New shot</string>
     <string name="next_lbl">Next</string>
+    <string name="username_lbl">Username</string>
+    <string name="password_lbl">Password</string>
+    <string name="reset_pwd_lbl">Reset password</string>
+    <string name="login_lbl">Login</string>
 
 </resources>

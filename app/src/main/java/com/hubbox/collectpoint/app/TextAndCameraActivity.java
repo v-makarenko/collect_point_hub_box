@@ -19,7 +19,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-public class TextAndCameraActivity extends AppCompatActivity implements SurfaceHolder.Callback {
+public class TextAndCameraActivity extends SecureActivity implements SurfaceHolder.Callback {
     public static final String STEP_NO = "STEP_NO";
     private static final String STEP_TEXT_ID_PREFIX = "text_and_cam_step_";
     private int step;

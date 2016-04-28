@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 import com.hubbox.collectpoint.app.util.ResourceUtils;
 
-public class TextAndButtonActivity extends AppCompatActivity {
+public class TextAndButtonActivity extends SecureActivity {
     public static final String STEP_NO = "STEP_NO";
     private static final String STEP_TEXT_ID_PREFIX = "text_step_";
     private static final String BTN_TEXT_ID_PREFIX = "text_btn_";

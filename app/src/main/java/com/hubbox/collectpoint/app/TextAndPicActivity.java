@@ -27,7 +27,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.List;
 
-public class TextAndPicActivity extends AppCompatActivity {
+public class TextAndPicActivity extends SecureActivity {
     public static final String STEP_NO = "STEP_NO";
     public static final String PIC_PATH = "PIC_PATH";
 
