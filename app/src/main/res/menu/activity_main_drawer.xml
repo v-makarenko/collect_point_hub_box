@@ -3,13 +3,13 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/add_parcel_drawer_item"
+            android:id="@+id/nav_add_parcel_drawer_item"
             android:title="Add a parcel" />
         <item
-            android:id="@+id/customer_faqs_drawer_item"
+            android:id="@+id/nav_customer_faqs_drawer_item"
             android:title="Customer FAQs" />
         <item
-            android:id="@+id/manage_parcels_drawer_item"
+            android:id="@+id/nav_manage_parcels_drawer_item"
             android:title="Managing Parcels" />
         <item
             android:id="@+id/nav_contact_hubbox_drawer_item"

@@ -80,4 +80,58 @@ The final thing to do is follow the practice instructions on the brochure and lo
     <string name="reset_pwd_lbl">Reset password</string>
     <string name="login_lbl">Login</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="faq_text"><![CDATA[
+    <h3>
+What is HubBox?
+</h3>
+<p>
+HubBox is a parcel Click & Collect service. You can shop anywhere online and get your parcels delivered to here.
+</p>
+<h3>
+How much does HubBox cost?
+</h3>
+<p>
+HubBox is FREE for the first month. After that customers can either choose:
+</p>
+Pay as you Go = £1.95 per parcel
+Subscription = £5.95 per month. Allows up to 10 parcels per month (if they do more they pay an additional £1.95 per parcel)
+</p>
+<h3>
+How do I join HubBox?
+</h3>
+<p>
+Customers need to register at www.hub-box.com to join.
+</p>
+<h3>
+What online shops and delivery companies does HubBox work with?
+</h3>
+<p>
+Customers can shop at any online shop worldwide and use any delivery company with HubBox.
+</p>
+<h3>
+What size parcels can I have delivered?
+</h3>
+<p>
+Rule of Thumb: As long as one person can comfortably carry the parcel, it will be accepted. Nothing bigger than a metre cubed or 20KG will be accepted.
+</p>
+<h3>
+How long do I have to collect my parcel?
+</h3>
+<p>
+Customers must collect their parcel within 14 days.
+</p>
+    ]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="give_out_parcel_lbl">Give out a parcel</string>
+    <string name="add_a_parcel_lbl">Add a parcel</string>
+    <string name="hubbox_code_lbl">HubBox code</string>
+    <string name="just_a_name_lbl">Just a name</string>
+    <string name="enter_hubbox_lbl">Enter HubBox Code</string>
+    <string name="add_this_parcel">Add this parcel</string>
+    <string name="add_just_name_lbl">Enter the full name on the parcel</string>
+    <string name="just_name_btn_lbl">Add this parcel</string>
+
 </resources>

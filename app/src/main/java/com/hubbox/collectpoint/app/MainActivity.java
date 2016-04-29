@@ -2,20 +2,32 @@ package com.hubbox.collectpoint.app;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.hubbox.collectpoint.app.fragments.AddGiveOutParcelFragment;
+import com.hubbox.collectpoint.app.fragments.CustomerFaqFragment;
+import com.hubbox.collectpoint.app.fragments.EnterHubBoxCodeFragment;
+import com.hubbox.collectpoint.app.fragments.GiveOutParcelFragment;
+import com.hubbox.collectpoint.app.fragments.JustNameEnterFragment;
 import com.hubbox.collectpoint.app.util.AppConsts;
+import com.hubbox.collectpoint.app.util.FragmentUtils;
+
+import com.hubbox.collectpoint.app.fragments.AddParcelFragment;
 
 public class MainActivity extends SecureActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener,
+        AddGiveOutParcelFragment.OnAddGiveOutParcelInteractionListener,
+        AddParcelFragment.OnAddParcelFragmentInteractionListener,
+EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
+        JustNameEnterFragment.OnJustNameEnterFragmentInteractionListener {
 
     private void startTourIfNeeded() {
         boolean notFirstRun = false;
@@ -97,6 +109,10 @@ public class MainActivity extends SecureActivity
             ((HubBoxApplication)getApplication()).logout();
             finish();
             startActivity(getIntent());
+        } else if(id == R.id.nav_customer_faqs_drawer_item){
+            FragmentUtils.addFragment(this, new CustomerFaqFragment());
+        }else if(id == R.id.nav_add_parcel_drawer_item){
+            FragmentUtils.addFragment(this, new AddGiveOutParcelFragment());
         }
 // else if (id == R.id.nav_gallery) {
 //
@@ -113,5 +129,39 @@ public class MainActivity extends SecureActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onAddGiveOutFragmentInteraction(AddGiveOutParcelFragment.Result result) {
+        switch (result){
+            case ADD_PARCEL:
+                FragmentUtils.addFragment(this, new AddParcelFragment());
+                break;
+            case GIVE_OUT:
+                FragmentUtils.addFragment(this, new GiveOutParcelFragment());
+                break;
+        }
+    }
+
+    @Override
+    public void onAddParcelFragmentInteraction(AddParcelFragment.Result result) {
+        switch (result){
+            case HUBBOX_CODE:
+                FragmentUtils.addFragment(this, new EnterHubBoxCodeFragment());
+                break;
+            case JUST_NAME:
+                FragmentUtils.addFragment(this, new JustNameEnterFragment());
+                break;
+        }
+    }
+
+    @Override
+    public void onEnterHubboxFragmentInteraction(String hubboxNo) {
+
+    }
+
+    @Override
+    public void onJustNameEnterFragmentInteraction(Uri uri) {
+
     }
 }
