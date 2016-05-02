@@ -17,6 +17,7 @@ import com.hubbox.collectpoint.app.fragments.CustomerFaqFragment;
 import com.hubbox.collectpoint.app.fragments.EnterHubBoxCodeFragment;
 import com.hubbox.collectpoint.app.fragments.GiveOutParcelFragment;
 import com.hubbox.collectpoint.app.fragments.JustNameEnterFragment;
+import com.hubbox.collectpoint.app.fragments.MyParcelsFragment;
 import com.hubbox.collectpoint.app.util.AppConsts;
 import com.hubbox.collectpoint.app.util.FragmentUtils;
 
@@ -27,7 +28,8 @@ public class MainActivity extends SecureActivity
         AddGiveOutParcelFragment.OnAddGiveOutParcelInteractionListener,
         AddParcelFragment.OnAddParcelFragmentInteractionListener,
 EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
-        JustNameEnterFragment.OnJustNameEnterFragmentInteractionListener {
+        JustNameEnterFragment.OnJustNameEnterFragmentInteractionListener,
+        MyParcelsFragment.OnMyParcelsFragmentInteractionListener {
 
     private void startTourIfNeeded() {
         boolean notFirstRun = false;
@@ -65,7 +67,7 @@ EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
+        FragmentUtils.addFragment(this, new AddGiveOutParcelFragment());
     }
 
     @Override
@@ -113,6 +115,8 @@ EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
             FragmentUtils.addFragment(this, new CustomerFaqFragment());
         }else if(id == R.id.nav_add_parcel_drawer_item){
             FragmentUtils.addFragment(this, new AddGiveOutParcelFragment());
+        }else if(id == R.id.nav_manage_parcels_drawer_item){
+            FragmentUtils.addFragment(this, new MyParcelsFragment());
         }
 // else if (id == R.id.nav_gallery) {
 //
@@ -162,6 +166,11 @@ EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
 
     @Override
     public void onJustNameEnterFragmentInteraction(Uri uri) {
+
+    }
+
+    @Override
+    public void onMyParcelsFragmentInteraction() {
 
     }
 }

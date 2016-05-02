@@ -14,10 +14,11 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:inputType="number"
         android:id="@+id/hubbox_code_et"/>
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/add_parcel_btn"
+        android:id="@+id/add_parcel_hubbox_code_btn"
         android:text="@string/add_this_parcel"/>
 </LinearLayout>

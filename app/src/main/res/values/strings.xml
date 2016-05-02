@@ -133,5 +133,10 @@ Customers must collect their parcel within 14 days.
     <string name="add_this_parcel">Add this parcel</string>
     <string name="add_just_name_lbl">Enter the full name on the parcel</string>
     <string name="just_name_btn_lbl">Add this parcel</string>
+    <string name="ref_number_lbl">REF Number</string>
+    <string name="id_lbl">ID</string>
+    <string name="REF_NO_lbl_2">they will have received it in an email</string>
+    <string name="REF_NO_lbl_1">Ask for their REF Number</string>
+    <string name="give_out_this_parcel_lbl">Give out this parcel</string>
 
 </resources>
