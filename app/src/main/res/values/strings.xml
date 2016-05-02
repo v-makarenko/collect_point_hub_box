@@ -138,5 +138,9 @@ Customers must collect their parcel within 14 days.
     <string name="REF_NO_lbl_2">they will have received it in an email</string>
     <string name="REF_NO_lbl_1">Ask for their REF Number</string>
     <string name="give_out_this_parcel_lbl">Give out this parcel</string>
+    <string name="which_have_you_seen_lbl">Which of these have you seen?</string>
+    <string name="passport_lbl">Passport</string>
+    <string name="driver_license_lbl">Drivers License</string>
+    <string name="bank_card_lbl">Bank card</string>
 
 </resources>

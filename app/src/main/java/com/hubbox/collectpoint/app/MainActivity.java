@@ -13,11 +13,14 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.hubbox.collectpoint.app.fragments.AddGiveOutParcelFragment;
+import com.hubbox.collectpoint.app.fragments.ConfirmReleaseParcelsFragment;
 import com.hubbox.collectpoint.app.fragments.CustomerFaqFragment;
 import com.hubbox.collectpoint.app.fragments.EnterHubBoxCodeFragment;
 import com.hubbox.collectpoint.app.fragments.GiveOutParcelFragment;
+import com.hubbox.collectpoint.app.fragments.IdDocumentChoiseFragment;
 import com.hubbox.collectpoint.app.fragments.JustNameEnterFragment;
 import com.hubbox.collectpoint.app.fragments.MyParcelsFragment;
+import com.hubbox.collectpoint.app.fragments.RefNumberEnterFragment;
 import com.hubbox.collectpoint.app.util.AppConsts;
 import com.hubbox.collectpoint.app.util.FragmentUtils;
 
@@ -29,7 +32,12 @@ public class MainActivity extends SecureActivity
         AddParcelFragment.OnAddParcelFragmentInteractionListener,
 EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
         JustNameEnterFragment.OnJustNameEnterFragmentInteractionListener,
-        MyParcelsFragment.OnMyParcelsFragmentInteractionListener {
+        MyParcelsFragment.OnMyParcelsFragmentInteractionListener,
+        IdDocumentChoiseFragment.OnIdDocChoiceFragmentInteractionListener,
+        ConfirmReleaseParcelsFragment.OnConfirmReleaseParcelsFragmentInteractionListener,
+        RefNumberEnterFragment.OnRefNumberFragmentInteractionListener
+
+{
 
     private void startTourIfNeeded() {
         boolean notFirstRun = false;
@@ -165,12 +173,27 @@ EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
     }
 
     @Override
-    public void onJustNameEnterFragmentInteraction(Uri uri) {
+    public void onJustNameEnterFragmentInteraction() {
 
     }
 
     @Override
     public void onMyParcelsFragmentInteraction() {
+
+    }
+
+    @Override
+    public void onConfirmReleaseParcelsFragmentInteraction() {
+
+    }
+
+    @Override
+    public void onIdDocChoiseFragmentInteraction() {
+
+    }
+
+    @Override
+    public void onRefNumberFragmentInteraction(Uri uri) {
 
     }
 }

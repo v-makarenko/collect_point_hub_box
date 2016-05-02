@@ -21,23 +21,11 @@ public class JustNameEnterFragment extends Fragment implements ITagFragment {
 
     private OnJustNameEnterFragmentInteractionListener mListener;
 
-    public JustNameEnterFragment() {
-        // Required empty public constructor
-    }
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_just_name_enter, container, false);
-    }
-
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onJustNameEnterFragmentInteraction(uri);
-        }
     }
 
     @Override
@@ -73,7 +61,6 @@ public class JustNameEnterFragment extends Fragment implements ITagFragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnJustNameEnterFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onJustNameEnterFragmentInteraction(Uri uri);
+        void onJustNameEnterFragmentInteraction();
     }
 }

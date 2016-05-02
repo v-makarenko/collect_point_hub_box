@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hubbox.collectpoint.app.R;
+import com.hubbox.collectpoint.app.interfaces.ITagFragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,7 +17,7 @@ import com.hubbox.collectpoint.app.R;
  * {@link RefNumberEnterFragment.OnRefNumberFragmentInteractionListener} interface
  * to handle interaction events.
  */
-public class RefNumberEnterFragment extends Fragment {
+public class RefNumberEnterFragment extends Fragment implements ITagFragment {
 
 
     private OnRefNumberFragmentInteractionListener mListener;
@@ -49,6 +50,11 @@ public class RefNumberEnterFragment extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+    }
+
+    @Override
+    public String getFragmentTag() {
+        return "ref_no_enter";
     }
 
     /**

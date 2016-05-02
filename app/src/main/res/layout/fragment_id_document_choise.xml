@@ -1,13 +1,28 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.hubbox.collectpoint.app.fragments.IdDocumentChoiseFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:text="@string/which_have_you_seen_lbl" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/passport_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/passport_lbl" />
+    <Button
+        android:id="@+id/drive_license_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/driver_license_lbl" />
+    <Button
+        android:id="@+id/bank_card_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bank_card_lbl" />
+</LinearLayout>

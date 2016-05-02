@@ -6,33 +6,30 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 
+import com.hubbox.collectpoint.app.MainActivity;
 import com.hubbox.collectpoint.app.R;
 import com.hubbox.collectpoint.app.dto.Parcel;
-import com.hubbox.collectpoint.app.util.PrototypeUtils;
-
-import org.w3c.dom.Text;
-
-import java.util.ArrayList;
-import java.util.List;
+import com.hubbox.collectpoint.app.fragments.IdDocumentChoiseFragment;
+import com.hubbox.collectpoint.app.fragments.MyParcelsFragment;
+import com.hubbox.collectpoint.app.fragments.RefNumberEnterFragment;
+import com.hubbox.collectpoint.app.util.FragmentUtils;
 
 /**
  * Created by VMakarenko on 01.05.2016.
  */
 public class MyParcelAdapter extends ArrayAdapter<Parcel> {
     private Context context;
+    private MyParcelsFragment fragment;
 
 
 //    private List<Parcel> parcelList = new ArrayList<>();
 
-    public MyParcelAdapter(Context context, int resource) {
+    public MyParcelAdapter(Context context, int resource, MyParcelsFragment fragment) {
         super(context, resource);
         this.context = context;
+        this.fragment = fragment;
         Log.d(this.getClass().getName(), "My parcel adapter loaded");
     }
 
@@ -43,6 +40,19 @@ public class MyParcelAdapter extends ArrayAdapter<Parcel> {
         View row = inflater.inflate(R.layout.my_parcel_item, parent, false);
         ((TextView)row.findViewById(R.id.user_name_tv)).setText(getItem(position).getName());
         ((TextView)row.findViewById(R.id.hubbox_code_tv)).setText(getItem(position).getHubboxCode().toString());
+
+        row.findViewById(R.id.ref_number_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentUtils.addFragment((MainActivity)fragment.getActivity(), new RefNumberEnterFragment());
+            }
+        });
+        row.findViewById(R.id.id_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentUtils.addFragment((MainActivity)fragment.getActivity(), new IdDocumentChoiseFragment());
+            }
+        });
         return row;
     }
 
