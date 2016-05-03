@@ -1,15 +1,17 @@
 package com.hubbox.collectpoint.app.fragments;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.hubbox.collectpoint.app.MainActivity;
 import com.hubbox.collectpoint.app.R;
 import com.hubbox.collectpoint.app.interfaces.ITagFragment;
+import com.hubbox.collectpoint.app.util.FragmentUtils;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -30,7 +32,16 @@ public class ConfirmReleaseParcelsFragment extends Fragment implements ITagFragm
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_confirm_release_parcels, container, false);
+        View view =  inflater.inflate(R.layout.fragment_confirm_release_parcels, container, false);
+        view.findViewById(R.id.confirm_btn).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ConfirmReleaseParcelsFragment.this.getActivity(),
+                        R.string.success_give_out_parcel_tst,Toast.LENGTH_SHORT).show();
+                FragmentUtils.setFragment((MainActivity) getActivity(), new AddGiveOutParcelFragment());
+            }
+        });
+        return view;
     }
 
     @Override

@@ -44,13 +44,13 @@ public class MyParcelAdapter extends ArrayAdapter<Parcel> {
         row.findViewById(R.id.ref_number_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentUtils.addFragment((MainActivity)fragment.getActivity(), new RefNumberEnterFragment());
+                FragmentUtils.setFragment((MainActivity) fragment.getActivity(), new RefNumberEnterFragment());
             }
         });
         row.findViewById(R.id.id_btn).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                FragmentUtils.addFragment((MainActivity)fragment.getActivity(), new IdDocumentChoiseFragment());
+                FragmentUtils.setFragment((MainActivity) fragment.getActivity(), new IdDocumentChoiseFragment());
             }
         });
         return row;

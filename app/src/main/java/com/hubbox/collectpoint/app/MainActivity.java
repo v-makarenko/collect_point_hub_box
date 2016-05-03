@@ -16,7 +16,6 @@ import com.hubbox.collectpoint.app.fragments.AddGiveOutParcelFragment;
 import com.hubbox.collectpoint.app.fragments.ConfirmReleaseParcelsFragment;
 import com.hubbox.collectpoint.app.fragments.CustomerFaqFragment;
 import com.hubbox.collectpoint.app.fragments.EnterHubBoxCodeFragment;
-import com.hubbox.collectpoint.app.fragments.GiveOutParcelFragment;
 import com.hubbox.collectpoint.app.fragments.IdDocumentChoiseFragment;
 import com.hubbox.collectpoint.app.fragments.JustNameEnterFragment;
 import com.hubbox.collectpoint.app.fragments.MyParcelsFragment;
@@ -75,7 +74,7 @@ EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        FragmentUtils.addFragment(this, new AddGiveOutParcelFragment());
+        FragmentUtils.setFragment(this, new AddGiveOutParcelFragment());
     }
 
     @Override
@@ -120,11 +119,11 @@ EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
             finish();
             startActivity(getIntent());
         } else if(id == R.id.nav_customer_faqs_drawer_item){
-            FragmentUtils.addFragment(this, new CustomerFaqFragment());
+            FragmentUtils.setFragment(this, new CustomerFaqFragment());
         }else if(id == R.id.nav_add_parcel_drawer_item){
-            FragmentUtils.addFragment(this, new AddGiveOutParcelFragment());
+            FragmentUtils.setFragment(this, new AddGiveOutParcelFragment());
         }else if(id == R.id.nav_manage_parcels_drawer_item){
-            FragmentUtils.addFragment(this, new MyParcelsFragment());
+            FragmentUtils.setFragment(this, new MyParcelsFragment());
         }
 // else if (id == R.id.nav_gallery) {
 //
@@ -147,10 +146,10 @@ EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
     public void onAddGiveOutFragmentInteraction(AddGiveOutParcelFragment.Result result) {
         switch (result){
             case ADD_PARCEL:
-                FragmentUtils.addFragment(this, new AddParcelFragment());
+                FragmentUtils.setFragment(this, new AddParcelFragment());
                 break;
             case GIVE_OUT:
-                FragmentUtils.addFragment(this, new GiveOutParcelFragment());
+                FragmentUtils.setFragment(this, new MyParcelsFragment());
                 break;
         }
     }
@@ -159,10 +158,10 @@ EnterHubBoxCodeFragment.OnEnterHubboxFragmentInteractionListener,
     public void onAddParcelFragmentInteraction(AddParcelFragment.Result result) {
         switch (result){
             case HUBBOX_CODE:
-                FragmentUtils.addFragment(this, new EnterHubBoxCodeFragment());
+                FragmentUtils.setFragment(this, new EnterHubBoxCodeFragment());
                 break;
             case JUST_NAME:
-                FragmentUtils.addFragment(this, new JustNameEnterFragment());
+                FragmentUtils.setFragment(this, new JustNameEnterFragment());
                 break;
         }
     }

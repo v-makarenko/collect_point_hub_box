@@ -31,7 +31,7 @@ public class IdDocumentChoiseFragment extends Fragment implements ITagFragment{
     public class ButtonListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {
-            FragmentUtils.addFragment((MainActivity)(IdDocumentChoiseFragment.this.getActivity()), new ConfirmReleaseParcelsFragment());
+            FragmentUtils.setFragment((MainActivity) (IdDocumentChoiseFragment.this.getActivity()), new ConfirmReleaseParcelsFragment());
         }
     }
 

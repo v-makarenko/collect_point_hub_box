@@ -142,5 +142,9 @@ Customers must collect their parcel within 14 days.
     <string name="passport_lbl">Passport</string>
     <string name="driver_license_lbl">Drivers License</string>
     <string name="bank_card_lbl">Bank card</string>
+    <string name="release_parcels_lbl1">That\'s great, release 4 parcels to Sam</string>
+    <string name="release_parcels_lbl2">The HubBox ID on the parcel is HB461487</string>
+    <string name="click_to_confirm_lbl">Click to confirm</string>
+    <string name="success_give_out_parcel_tst">Success! You have given out a parcel</string>
 
 </resources>

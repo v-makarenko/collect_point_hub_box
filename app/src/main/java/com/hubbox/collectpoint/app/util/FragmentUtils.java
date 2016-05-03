@@ -11,7 +11,7 @@ import com.hubbox.collectpoint.app.interfaces.ITagFragment;
  * Created by VMakarenko on 29.04.2016.
  */
 public class FragmentUtils {
-    public static void addFragment(AppCompatActivity activity, ITagFragment fragment){
+    public static void setFragment(AppCompatActivity activity, ITagFragment fragment){
         activity.getSupportFragmentManager()
                 .beginTransaction()
                 .replace(R.id.frame_layout_id, (Fragment)fragment, fragment.getFragmentTag())
